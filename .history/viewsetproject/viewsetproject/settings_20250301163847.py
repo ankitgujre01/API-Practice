@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'rest_framework',  # rest_framework is a third-party package that is used to create APIs in Django.
-    'rest_framework.authtoken',  # rest_framework.authtoken is a third-party package that is used to create tokens for APIs in Django.
-    'rest_framework_simplejwt'  # rest_framework_simplejwt is a third-party package that is used to create tokens for APIs in Django.
 ]
 
 MIDDLEWARE = [
@@ -128,9 +126,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        # 'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',   
+        'rest_framework.authentication.'rest_framework.authentication.BasicAuthentication'
     ]
 }
